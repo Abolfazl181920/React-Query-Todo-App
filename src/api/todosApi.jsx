@@ -8,3 +8,7 @@ export const getTodos = async () => {
     const response = await todosApi.get("/todos")
     return response.data
 }
+
+export const addTodo = async (todo) => {
+    return await todosApi.post("/todo", todo)
+}
