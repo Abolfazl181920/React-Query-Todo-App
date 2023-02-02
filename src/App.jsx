@@ -1,7 +1,9 @@
+import TodoList from './features/TodoList'
+
 const App = () => {
 	return (
 		<div>
-			App
+			<TodoList />
 		</div>
 	)
 }
