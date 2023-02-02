@@ -14,5 +14,9 @@ export const addTodo = async (todo) => {
 }
 
 export const updateTodo = async (todo) => {
-    return await todosApi.patch(`/todos${todo.id}`, todo)
+    return await todosApi.patch(`/todos/${todo.id}`, todo)
+}
+
+export const deleteTodo = async ({ id }) => {
+    return await todosApi.delete(`/todos/${id}`, id)
 }
