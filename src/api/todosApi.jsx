@@ -12,3 +12,7 @@ export const getTodos = async () => {
 export const addTodo = async (todo) => {
     return await todosApi.post("/todo", todo)
 }
+
+export const updateTodo = async (todo) => {
+    return await todosApi.patch(`/todos${todo.id}`, todo)
+}
