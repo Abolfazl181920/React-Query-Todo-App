@@ -58,10 +58,21 @@ const TodoList = () => {
         </form>
     )
 
+    let content
+    if (isLoading) {
+        content = <p>Loading...</p>
+    } else if (isError) {
+        content = <p> {error.message} </p>
+    } else {
+        content = JSON.stringify(todos)
+    }
+
     return (
-        <div>
-            
-        </div>
+        <main>
+            <h1>Todo List</h1>
+            {newItemSection}
+            {content}
+        </main>
     )
 }
 
